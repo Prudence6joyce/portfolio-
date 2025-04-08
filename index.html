@@ -1,72 +1,270 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prudence Joyce Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Prudence Joyce - Recipes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5e6d3;
+        }
+
+        header {
+            background-color: #8b4513;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 6rem 2rem 2rem;
+            min-height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .recipe-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #8b4513;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #6b3410;
+        }
+
+        footer {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Prudence Joyce</h1>
+        <h1>Prudence's Kitchen</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="recipes.html">My Recipes</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Welcome to My Recipe Collection</h2>
-        <p>Discover my favorite homemade recipes, crafted with love and passion.</p>
+
+
+    <section id="home" class="hero">
+        <h2>Traditional Recipes with Modern Flair</h2>
+        <p>Authentic Kenyan flavors reimagined for today's kitchen</p>
     </section>
+
+    
     <section id="recipes">
-        <h2>Featured Recipes</h2>
-        <div class="recipe">
-            <h3>Spicy Kenyan Pilau</h3>
-            <p>Aromatic rice cooked with a blend of spices, beef, and caramelized onions for a rich, flavorful dish.</p>
-        </div>
-        <div class="recipe">
-            <h3>Creamy Coconut Ugali</h3>
-            <p>A twist on the classic Kenyan staple, this ugali is infused with coconut milk for a smooth and rich texture.</p>
-        </div>
-        <div class="recipe">
-            <h3>Sweet Mandazi</h3>
-            <p>Deliciously soft and fluffy Swahili doughnuts, lightly spiced with cardamom and deep-fried to perfection.</p>
+        <h2>Signature Recipes</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Pilau">
+                <h3>Spiced Kenyan Pilau</h3>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>2 cups basmati rice</li>
+                    <li>1 lb beef, cubed</li>
+                    <li>3 cups coconut milk</li>
+                    <li>2 tbsp pilau masala</li>
+                    <li>1 cinnamon stick</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Brown beef in pot with onions</li>
+                    <li>Add spices and toast for 1 minute</li>
+                    <li>Stir in rice and coconut milk</li>
+                    <li>Simmer covered for 20 minutes</li>
+                </ol>
+            </div>
+
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1573821663912-569905455b1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80" alt="Ugali">
+                <h3>Coconut Ugali</h3>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>2 cups maize flour</li>
+                    <li>1 cup cassava flour</li>
+                    <li>4 cups water</li>
+                    <li>1 cup coconut milk</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Bring liquids to boil</li>
+                    <li>Gradually add flour while mixing</li>
+                    <li>Cook for 10 minutes, stirring constantly</li>
+                    <li>Mold into shape and serve warm</li>
+                </ol>
+            </div>
+
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mandazi">
+                <h3>Cardamom Mandazi</h3>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>4 cups flour</li>
+                    <li>1 cup coconut milk</li>
+                    <li>1 tbsp cardamom</li>
+                    <li>1/2 cup sugar</li>
+                    <li>Oil for frying</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Mix dry ingredients</li>
+                    <li>Add coconut milk to form dough</li>
+                    <li>Roll out and cut into triangles</li>
+                    <li>Fry until golden brown</li>
+                </ol>
+            </div>
         </div>
     </section>
+
+    
     <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Prudence Joyce, a passionate cook who loves to experiment with flavors. I create recipes inspired by traditional Kenyan cuisine with a modern twist.</p>
+        <div class="recipe-card">
+            <h2>About Chef Prudence</h2>
+            <p>With over 15 years of culinary experience, Prudence Joyce combines traditional Kenyan cooking techniques with modern presentation. Trained in Nairobi and Paris, she specializes in making authentic African flavors accessible to home cooks worldwide.</p>
+            <h3>Cooking Philosophy:</h3>
+            <ul>
+                <li>✓ Use of fresh, local ingredients</li>
+                <li>✓ Preservation of culinary heritage</li>
+                <li>✓ Balanced, nutritious meals</li>
+                <li>✓ Sustainable kitchen practices</li>
+            </ul>
+        </div>
     </section>
+
+    
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <label for="name">Prudence Joyce:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">prudenceombima@gmail.com:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
+        <div class="recipe-card">
+            <h2>Get Cooking Updates</h2>
+            <form id="contactForm">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" required>
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" required>
+                </div>
+                <div>
+                    <label>Message:</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+                <button type="submit">Join Newsletter</button>
+            </form>
+        </div>
     </section>
+
     <footer>
-        <p>&copy; 2025 Prudence Joyce. All rights reserved.</p>
+        <p>© 2024 Prudence's Kitchen - All recipes and photos are property of Prudence Joyce</p>
     </footer>
+
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Thank you for reaching out!');
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing! New recipes coming your way soon.');
+            e.target.reset();
         });
     </script>
 </body>
 </html>
-
-
-
